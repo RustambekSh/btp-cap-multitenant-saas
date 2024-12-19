@@ -166,6 +166,7 @@ modules:
       brokerUrl: ~{susaas-api-sb-srv/srv-url}
       approuterUrl: ~{susaas-router-api/app-url}
       appName: ~{susaas-router-api/application}
+      OTEL_SERVICE_NAME: ${app-name}
     requires:
       - name: susaas-uaa
       - name: susaas-credstore
@@ -280,6 +281,8 @@ modules:
       app-name: susaas-api-srv-${space}
       memory: 256MB
       disk-quota: 1024MB
+    properties:
+      OTEL_SERVICE_NAME: ${app-name}
     build-parameters:
       builder: npm
       ignore: [ '.DS_Store', 'node_modules/', 'default-env.json', 'manifest*.yml' ]
