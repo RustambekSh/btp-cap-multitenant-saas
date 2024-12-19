@@ -4,6 +4,12 @@
         "multitenancy": true,
         "toggles": true,
         "extensibility": true,
+        "[production]": {
+            "cloud-logging": true,
+            "telemetry": {
+              "kind": "to-cloud-logging"
+            }
+        },
         "cds.xt.ExtensibilityService": {
             "element-prefix": [
                 "x_"
