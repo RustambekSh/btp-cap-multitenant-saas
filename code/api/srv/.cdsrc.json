@@ -5,12 +5,6 @@
         "cds.xt.ModelProviderService": false,
         "cds.xt.DeploymentService": false,
         "cds.xt.SaasProvisioningService": false,
-        "[production]": {
-            "cloud-logging": true,
-            "telemetry": {
-              "kind": "to-cloud-logging"
-            }
-        },
         "db": {
             "vcap": {
                 "label": "service-manager",
